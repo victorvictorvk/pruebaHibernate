@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hibernate.modelo.Empleado" table="Empleado">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre" />
+        </property>
+        <property name="rol" type="java.lang.String">
+            <column name="rol" />
+        </property>
+        <property name="fecha" type="java.util.Date">
+            <column name="fecha" />
+        </property>
+    </class>
+</hibernate-mapping>
