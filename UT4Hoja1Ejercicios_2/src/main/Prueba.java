@@ -17,8 +17,8 @@ public class Prueba {
 		
 		
 		Seguro s = new Seguro();
-		s.setNif("cdcddx2");
-		s.setNombre("MayorEdad2");
+		s.setNif("123456");
+		s.setNombre("Seguro");
 		s.setApe1("con");
 		s.setApe2("Anotaciones");
 		s.setEdad(21);
