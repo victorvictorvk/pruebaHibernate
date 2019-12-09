@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 09-dic-2019 19:22:21 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="profesor_ejercicio3" dynamic-insert="false" dynamic-update="false" mutable="true" name="Direccion" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Direccion">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="calle" optimistic-lock="true" type="string" unique="false">
+            <column name="calle"/>
+        </property>
+        <property generated="never" lazy="false" name="numero" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="numero"/>
+        </property>
+        <property generated="never" lazy="false" name="poblacion" optimistic-lock="true" type="string" unique="false">
+            <column name="poblacion"/>
+        </property>
+        <property generated="never" lazy="false" name="provincia" optimistic-lock="true" type="string" unique="false">
+            <column name="provincia"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="profesors" optimistic-lock="true" sort="unsorted" table="Profesor">
+            <key on-delete="noaction">
+                <column name="direccion_id"/>
+            </key>
+            <one-to-many class="Profesor" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

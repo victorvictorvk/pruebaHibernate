@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 09-dic-2019 19:22:21 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="profesor_ejercicio3" dynamic-insert="false" dynamic-update="false" mutable="true" name="Profesor" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="Profesor">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="Direccion" embed-xml="true" fetch="select" insert="true" name="direccion" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="direccion_id"/>
+        </many-to-one>
+        <many-to-one class="Modulo" embed-xml="true" fetch="select" insert="true" name="modulo" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="modulo_id"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <column name="nombre"/>
+        </property>
+        <property generated="never" lazy="false" name="ape1" optimistic-lock="true" type="string" unique="false">
+            <column name="ape1"/>
+        </property>
+        <property generated="never" lazy="false" name="ape2" optimistic-lock="true" type="string" unique="false">
+            <column name="ape2"/>
+        </property>
+    </class>
+</hibernate-mapping>
